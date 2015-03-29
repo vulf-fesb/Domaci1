@@ -3,6 +3,42 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"></RowDefinition>
+            <RowDefinition Height="20*"></RowDefinition>
+            <RowDefinition Height="70*"></RowDefinition>
+        </Grid.RowDefinitions>
         
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20*"></ColumnDefinition>
+            <ColumnDefinition Width="80*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <StackPanel Grid.Row="0" Grid.Column="1"  Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Width="70" Margin="2">Dodaj L</Button>
+            <Button Width="70" Margin="2">Dodaj R</Button>
+        </StackPanel>
+        
+        <Rectangle Grid.Row="1" Grid.Column="0" Width="60" Height="60" Margin="0 0 0 5" Fill="LightBlue" ></Rectangle>
+        
+        <TextBox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Left" Width="300">Search</TextBox>
+        
+        <ScrollViewer Grid.Row="2" Grid.Column="0" VerticalScrollBarVisibility="Hidden">
+            <StackPanel Orientation="Vertical">
+                <Rectangle Fill="Orange" Height="60" Width="60" Margin="5"></Rectangle>
+                <Rectangle Fill="Orange" Height="60" Width="60" Margin="5"></Rectangle>
+                <Rectangle Fill="Orange" Height="60" Width="60" Margin="5"></Rectangle>
+            </StackPanel>
+        </ScrollViewer>
+
+        <ScrollViewer Grid.Row="2" Grid.Column="1" VerticalScrollBarVisibility="Hidden">
+            <StackPanel Orientation="Vertical">
+                <Rectangle Fill="Red" Height="30" Width="350" Margin="5"></Rectangle>
+                <Rectangle Fill="Red" Height="30" Width="350" Margin="5"></Rectangle>
+                <Rectangle Fill="Red" Height="30" Width="350" Margin="5"></Rectangle>
+                <Rectangle Fill="Red" Height="30" Width="350" Margin="5"></Rectangle>
+            </StackPanel>
+        </ScrollViewer>
+
     </Grid>
 </Window>
