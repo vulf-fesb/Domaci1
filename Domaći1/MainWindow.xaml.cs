@@ -24,5 +24,39 @@ namespace Domaći1
         {
             InitializeComponent();
         }
+
+        private void Window_Loaded_1(object sender, RoutedEventArgs e)
+        {
+            this.DodajL.Click += DodajL_Click;
+            this.DodajR.Click += DodajR_Click;
+        }
+
+        void DodajR_Click(object sender, RoutedEventArgs e)
+        {
+            //throw new NotImplementedException();
+
+            Rectangle rectangle = new Rectangle();
+
+            rectangle.Height = 30;
+            rectangle.Width = 350;
+            rectangle.Fill = Brushes.Red;
+            rectangle.Margin = new Thickness(5);
+
+            this.RRectangleContainer.Children.Add(rectangle);
+        }
+
+        void DodajL_Click(object sender, RoutedEventArgs e)
+        {
+            //throw new NotImplementedException();
+
+            Rectangle rectangle = new Rectangle();
+
+            rectangle.Height = 60;
+            rectangle.Width = 60;
+            rectangle.Fill = Brushes.Orange;
+            rectangle.Margin = new Thickness(5);
+
+            this.LRectangleContainer.Children.Add(rectangle);
+        }
     }
 }
