@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="Domaći1.Controls.Post"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:controls="clr-namespace:Domaći1.Controls"
+             mc:Ignorable="d" 
+             x:Name="PostElement"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="8*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="9*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+
+        <Image x:Name="EditPost" Source="/Resources/Images/edit.png" Cursor="Hand" Height="20" Grid.Column="0" Grid.Row="0"></Image>
+        <Image x:Name="DeletePost" Source="/Resources/Images/delete.png" Cursor="Hand" Height="20" Grid.Column="2" Grid.Row="0"></Image>
+        <controls:User Width="80" Margin="5" Grid.Column="0" Grid.Row="1" UserName="{Binding ElementName=PostElement,Path=PostUserName}"></controls:User>
+        <TextBlock Grid.Column="1" Margin="5" Grid.Row="1" Text="{Binding ElementName=PostElement,Path=PostText}"></TextBlock>
+    </Grid>
+</UserControl>
